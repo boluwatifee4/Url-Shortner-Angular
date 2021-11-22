@@ -1,0 +1,26 @@
+<header>
+    <div class="logo">
+        <span>URL SHORTENER</span>
+        <!-- <img src="assets/hand-sci.png" alt=""> -->
+        <!-- <i class="far fa-hand-scissors"></i> -->
+    </div>
+</header>
+
+<div class="shortener-text" >
+    <h1 id="bold">Hello Welcome !!</h1>
+    <h3 id="light">It is another {{todayNumber  | date:'EEEE'}} to shorten your links</h3>
+</div>
+
+    <div class="container bucket in">
+    </div>
+
+<section class="short">
+<div class="input">
+    <input type="text" placeholder="paste your link">
+    <button>shorten</button>
+    <p>your link is ready</p>
+    <button id="copy">Copy link</button>
+    <input type="text" disabled value="your short link will appear here">
+</div>
+</section>
+<!-- (change)="log(firstName)" ngModel name ="firstName" #firstName="ngModel"-->

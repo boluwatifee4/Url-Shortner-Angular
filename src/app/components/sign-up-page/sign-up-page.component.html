@@ -1,0 +1,27 @@
+
+<img src="assets/hand-key-removebg-preview.png" alt="" class="h-k">
+<div class="form-body s">
+  <h1>Hello Welcome </h1>
+  <h3>Create An Account</h3>
+    <form [formGroup]="signUpForm"  class="l-form">
+      <div class="l-form">
+        <span class="info" *ngIf="signUpForm.controls['fullname'].dirty && signUpForm.hasError('required', 'fullname')">Fullname Field Is Required</span>
+        <label for="firstName">FirstName</label>
+        <input formControlName="fullname"  type="text" class="form-control" id="userName">
+
+        <span class="info" *ngIf="signUpForm.controls['password'].dirty && signUpForm.hasError('required', 'password')">Password Field Is Required</span>
+        <label for="password">Password</label>
+        <input formControlName="password" type="password">
+
+        <span class="info" *ngIf="signUpForm.controls['email'].dirty && signUpForm.hasError('required', 'email')">Email Field Is Required</span>
+        <label for="Email">Email</label>
+        <input formControlName="email"  type="email" class="form-control">
+      </div>
+
+      <button class="btn btn-primary" [disabled]="!signUpForm.valid"><a href="login">Submit</a></button>
+
+      <span>Already have an account?</span><a href="login">login here</a>
+    </form>
+</div>
+
+<img src="assets/smile-pass-removebg-preview.png" alt="" class="s-k">

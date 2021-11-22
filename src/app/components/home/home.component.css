@@ -1,0 +1,219 @@
+header{
+    display: flex;
+    margin: 1rem 10px;
+    justify-content: center;
+  }
+  
+  .logo{
+    margin: 2rem;
+  }
+  
+  .logo, span, img{
+    font-size: 3rem;
+    color: white;
+    font-weight: 600;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background: linear-gradient(to right, #FFF 20%, #FF0 40%, #FF0 60%, #FFF 80%);
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 3s linear infinite;
+  }
+  @keyframes shine {
+    to {
+      background-position: 200% center;
+    }
+  }
+  
+  img{
+    animation: cut 1.5s ease-in-out infinite;
+  }
+ 
+  @keyframes cut {
+    0%{
+      transform: rotateX();
+    }
+    20%{
+      transform: rotateX(20deg);
+    }
+    40%{
+      transform: rotateX(40deg);
+    }
+    50%{
+      transform: rotateX(60deg);
+    }
+    20%{
+      transform: rotateX(0deg);
+    }
+  }
+  
+  .bucket:after{
+    content: '';
+    position: absolute;
+    height: 105%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 10px;
+    background: linear-gradient(120deg, #00F260, #0575E6, #00F260);
+    background-size: 500% 500%;
+    clip-path: polygon(0% 100%, 3px 100%, 3px 3px, calc(100% - 3px) 3px, calc(100% - 3px) calc(100% - 3px), 3px calc(100% - 3px), 3px 100%, 100% 100%, 100% 0%, 0% 0%);
+  }
+  
+    .bucket.in:after{
+  
+      animation: frame-enter 1s forwards ease-in-out reverse, gradient-animation 4s ease-in-out infinite;
+    }
+  
+  @keyframes gradient-animation {
+    0% {
+      background-position: 15% 0%;
+    }
+    50% {
+      background-position: 85% 100%;
+    }
+    100% {
+      background-position: 15% 0%;
+    }
+  }
+  
+  @keyframes frame-enter {
+    0% {
+      clip-path: polygon(0% 100%, 3px 100%, 3px 3px, calc(100% - 3px) 3px, calc(100% - 3px) calc(100% - 3px), 3px calc(100% - 3px), 3px 100%, 100% 100%, 100% 0%, 0% 0%);
+    }
+    25% {
+      clip-path: polygon(0% 100%, 3px 100%, 3px 3px, calc(100% - 3px) 3px, calc(100% - 3px) calc(100% - 3px), calc(100% - 3px) calc(100% - 3px), calc(100% - 3px) 100%, 100% 100%, 100% 0%, 0% 0%);
+    }
+    50% {
+      clip-path: polygon(0% 100%, 3px 100%, 3px 3px, calc(100% - 3px) 3px, calc(100% - 3px) 3px, calc(100% - 3px) 3px, calc(100% - 3px) 3px, calc(100% - 3px) 3px, 100% 0%, 0% 0%);
+    }
+    75% {
+      -webkit-clip-path: polygon(0% 100%, 3px 100%, 3px 3px, 3px 3px, 3px 3px, 3px 3px, 3px 3px, 3px 3px, 3px 0%, 0% 0%);
+    }
+    100% {
+      -webkit-clip-path: polygon(0% 100%, 3px 100%, 3px 100%, 3px 100%, 3px 100%, 3px 100%, 3px 100%, 3px 100%, 3px 100%, 0% 100%);
+    }
+  }
+  
+  .short{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding: 5rem 0rem;
+    border: 1px solid rgb(248, 234, 208);
+    margin: 3rem 20rem;
+    border-radius: 5px;
+  }
+  
+  input{
+    border-radius: 20px;
+    padding: 1rem 3rem;
+    border: none;
+    transition: .5s linear;
+    margin:0 1rem;
+  }
+  input:focus{
+    border-radius: 20px;
+    outline: none;
+    padding: 1rem 6rem;
+    padding-left:1rem ;
+    transition: .5s linear;
+  }
+  .input{
+    margin-top: 3rem;
+  }
+  .input p{
+    margin: .6rem;
+    color: white;
+  }
+  button{
+    padding: .5rem;
+    border-radius: 10px;
+    font-size: 1rem;
+    border: none;
+    color: rgb(194, 8, 8);
+    font-weight: 600;
+    background-color: rgb(253, 234, 199);
+  }
+  #bold, #light{
+    text-align: center;
+    color: white;
+    animation: fadeIn 1.7s ease-in-out;
+  }
+  #bold{
+    font-size: 1.2rem;
+  }
+  @keyframes fadeIn {
+    0%{
+      opacity: 0;
+    }
+    100%{
+      opacity: 1;
+    }
+  }
+  input:disabled{
+    background-color: rgb(223, 211, 211);
+  }
+  button{
+    background-color: white;
+}
+#copy{
+    color: green;
+}
+@media only screen and (max-width:1024px) and (min-width:52px){
+    header{
+        margin: 1rem 0;
+        margin-top: 4rem;
+    }
+    .logo, span, i{
+        font-size: 1.7rem;
+    }
+    #bold,#light{
+        font-size: 1.1rem;
+    }
+    .short{        
+        border: none;
+        padding: 1rem;
+        margin: 2rem;
+        margin-bottom: 0;
+        flex-direction: column;
+    }
+    #light{
+        font-size: 1rem;
+      }
+    input{
+        color: white;
+        background-color: transparent;
+        border-bottom:3px solid white;
+        margin: 1rem !important;
+        padding: .2rem 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    .bucket::after{
+        margin: .3rem;
+    }
+    input:focus{
+        padding: .2rem 2rem;
+    }
+    button{
+        border-radius: 5px;
+        padding: .3rem;
+        font-size: .6rem;
+    }
+    
+    .cursor, .cursor2{
+        display: none;
+    }
+
+    ::-webkit-input-placeholder{
+        color: white;
+    }
+    
+}
+
+  

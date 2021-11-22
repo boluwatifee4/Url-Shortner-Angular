@@ -1,0 +1,18 @@
+<img src="assets/emoji-key-removebg-preview.png" alt="" class="h-k">
+  <div class="form-body ls">
+    <h1 class="sl">Hi Welcome Back</h1>
+          <h3>Login Here</h3>
+      <form [formGroup]="loginForm"  class="l-form">
+        <div class="l-form">
+          <span class="info" *ngIf="loginForm.controls['email'].dirty && loginForm.hasError('required', 'email')">Email Field Is Required</span>
+          <label for="email">Email</label>
+          <input formControlName="email" required   id="UserName" type="text" class="form-control"><br>
+          <span class="info" *ngIf="loginForm.controls['password'].dirty && loginForm.hasError('required', 'password')">Password Field Is Required</span>
+          <label for="password">Password</label>
+          <input formControlName="password" type="password" id="PassWord">
+        </div>
+        <button class="btn btn-primary" [disabled]="!loginForm.valid" ><a href="home">Submit</a></button>
+        <span>Don't have an account?</span><a href="signUp">signUp</a>
+      </form>
+  </div>
+  <img src="assets/smile-pass-removebg-preview.png" alt="" class="s-k">

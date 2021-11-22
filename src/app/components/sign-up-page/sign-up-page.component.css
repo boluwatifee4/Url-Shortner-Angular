@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@700&display=swap');
+
+ 
+  .form-body{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    margin: 2rem;
+    margin-top: 6rem;
+  }
+  .sl{
+      font-size: 1.2rem;
+  }
+h1{
+    margin: 1rem;
+}
+h3{
+    margin-bottom: 2rem;
+}
+input{
+    background-color: transparent;
+    padding: 1.5rem;
+    border: none;
+    border-bottom: 1px solid white;
+    margin: 1rem;
+    margin-left: 0;
+    caret-color: white;
+    color: white;
+    
+}
+input:focus{
+    outline: none;
+    color: rgb(253, 229, 229);
+}
+::-webkit-input-placeholder{
+    color: rgb(253, 229, 229);
+    padding: .5rem;
+}
+.l-form{
+   margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    
+}
+button{
+    padding:.8rem;
+    margin: 1rem 2rem;
+    border-radius: 10px;
+    border: none;
+}
+button a{
+    font-size: 1rem;
+    color: black;
+}
+a{
+    color: white;
+    font-size: .8rem;
+}
+
+.s h1{
+    font-size:2.2rem
+}
+.s input{
+    padding: 1.5rem 10rem;
+    padding-left: 0;
+}
+.h-k{
+    position: absolute;
+    width: 25%;
+  }
+  .s-k{
+      position: absolute;
+      left: 80%;
+      top: 70%;
+  }
+  .info{
+      color: rgb(247, 164, 164);
+      font-size: .8rem;
+      margin: .5rem;
+      animation: fadeIn 1.7s ease-in-out;
+  }
+  @keyframes fadeIn {
+    0%{
+      opacity: 0;
+    }
+    100%{
+      opacity: 1;
+    }
+  }
+  form{
+    transition: ease-in-out 1s;
+  }
+  
+  
+  @media only screen and (max-width:1024px) and (min-width:280px) {
+    .s-k{
+        top: 80%;
+        width: 25%;
+        left: 73%;
+    }
+    .h-k{
+        top: 5%;
+    }
+    .s input{
+        padding: 1.5rem 3rem;
+        padding-left: 0;
+    }
+  }
